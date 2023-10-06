@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            background-image: url('https://media.istockphoto.com/id/1367756031/vector/light-blue-watercolor-background-illustration.jpg?s=612x612&w=0&k=20&c=qiJl7j-2terwHd-1YJxiFIo1VJx6l6IsmoqlgeypQ7c=');
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
         .gg{
-            padding-left: 620px;
+            align-items: center;
+            padding-left: 257px;
         }
         input{
             width: 200px;
@@ -16,9 +22,10 @@
             border-radius: 20px;
         }
         .gh{
-            padding-left: 650px;
+            padding-left: 400px;
             border-color: black;
             border-radius: 20px;
+            padding-top: 20px;
         }
         .ee{
             background-color: aqua;
@@ -34,12 +41,54 @@
             background-color:blue;
             margin:500px;
         }
+        .as{
+            padding-left: 600px;
+            padding-bottom: 5px;
+        }
+        h1{
+            font-family:'Times New Roman', Times, serif;
+            color:red;
+            font-size: 70px;
+        }
+        .button1{
+            margin-left: 0px;
+            margin-right: 100px;
+            border-radius: 98px;
+            border-width:0px;
+            color:white;
+            background-color:red;
+            width: 110px;
+            height: 40px;
+            font-size: 18px;
+        }
+        .button2{
+           margin-left: 450px;
+           border-radius: 98px;
+           background-color: green;
+           container: square;
+           color:white;
+           border-width:0px;
+           width: 110px;
+            height: 40px;
+            font-size: 18px;
+        }
+        h2{
+            padding-top: 10px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
     <b><h2 style="font-style: italic; text-align: center;">Welcome to</h2></b>
     <b><h1 style="font-style: italic; text-align: center;">Know Your Crop</h1></b>
-    <h1 style="text-align: center;">Complete the following details according to your soil test reports ::</h1><br>
+    <h2 style="text-align: center;">Complete the following details according to your soil test reports ::</h2><br>
    <div class="gh"> <select name="state" id="">
         <option value="ee">       select your state</option>
                <option value="ee">Telangana</option>
@@ -70,20 +119,22 @@
                <option value="ee">Meghalaya</option>
                <option value="ee">Haryana</option>
                <option value="ee">Tripura</option>
+    </div>
     </select><br><br>
-    <select name="state" id="">
+    <div class="as"><select name="state" id="">
         <option value="ee">Water availabilty</option>
         <option value="ee">Delta region</option>
         <option value="ee">Medium availabilty</option>
         <option value="ee">Drought area</option>
-    </select><br><br>
-</div>
+    </select></div><br><br>
 <div class="gg"><input type="text" placeholder="            Enter the soil ph"></div><br>
 <div class="gg"><input type="text" placeholder="            Enter the soil nitrogen"></div><br>
 <div class="gg"><input type="text" placeholder="            Enter the soil phospor"></div><br>
 <div class="gg"><input type="text" placeholder="            Enter the soil potasium"></div><br>
-<div>
-    <button class="btn-1">Submit</button>
-</div>
+<div class="gg"><input type="text" placeholder="       Enter the soil previous crop"></div><br>
+<b>
+<button class="button1"><a href="KYC.HTML">Back</a></button>
+<button class="button2"><a href="new.html">Submit</a></button>
+</b>
 </body>
 </html>

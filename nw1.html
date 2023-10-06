@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Star Rating Feedback</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .rating {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    input {
+      display: none;
+    }
+    label {
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      background-color: #ddd;
+      margin-right: 4px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+    }
+    label:before {
+      content: '★';
+      font-size: 18px;
+    }
+    input:checked ~ label {
+      background-color: #FFD700;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body style="align-items: center;">
+
+  <form id="feedbackForm">
+    <div class="rating">
+      <input type="radio" name="rating" value="1" id="star1">
+      <label for="star1"></label>
+      <input type="radio" name="rating" value="2" id="star2">
+      <label for="star2"></label>
+      <input type="radio" name="rating" value="3" id="star3">
+      <label for="star3"></label>
+      <input type="radio" name="rating" value="4" id="star4">
+      <label for="star4"></label>
+      <input type="radio" name="rating" value="5" id="star5">
+      <label for="star5"></label>
+    </div>
+
+    <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+  </form>
+
+  <script>
+    function submitFeedback() {
+      var rating = document.querySelector('input[name="rating"]:checked');
+
+      // You can add additional validation here
+
+      if (!rating) {
+        alert('Please provide a rating.');
+        return;
+      }
+
+      // Simulate sending feedback to a server (you'd typically use AJAX here)
+      console.log('Feedback submitted:', { rating: rating.value });
+
+      // Clear the form after submission
+      document.getElementById('feedbackForm').reset();
+    }
+  </script>
+
+</body>
+</html>
